@@ -1,0 +1,15 @@
+/* HEX and RGBA colors */
+body {
+  color: #222222;
+  background-color: rgba(240, 240, 240, 0.9);
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Gradient */
+section.header {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  padding: 20px;
+}
