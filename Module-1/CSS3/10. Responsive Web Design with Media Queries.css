@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .responsive-section {
+    width: 90vw;
+    padding: 5vh;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
