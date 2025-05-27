@@ -1,0 +1,18 @@
+<input type="text" id="phone" placeholder="Phone" onblur="validatePhone(this)">
+<select onchange="alert('Fee: $10')">
+  <option>Select Event</option>
+  <option>Music</option>
+</select>
+<button onclick="alert('Form submitted')">Submit</button>
+<img src="event.jpg" ondblclick="this.style.width='300px'">
+<textarea onkeyup="document.getElementById('charCount').textContent = this.value.length + ' characters'"></textarea>
+<p id="charCount">0 characters</p>
+
+<script>
+  function validatePhone(input) {
+    const pattern = /^\d{10}$/;
+    if (!pattern.test(input.value)) {
+      alert('Enter 10-digit number');
+    }
+  }
+</script>
