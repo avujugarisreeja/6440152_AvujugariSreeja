@@ -11,7 +11,7 @@ public class ChatServer {
 
         out.write("Welcome!\n");
         out.flush();
-
+        
         String msg;
         while ((msg = in.readLine()) != null) {
             System.out.println("Client: " + msg);
