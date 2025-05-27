@@ -1,0 +1,20 @@
+Inline:
+<h1 style="color: red;">Local Event</h1>
+Internal (inside <head>):
+<style>
+  body {
+    background-color: #f0f0f0;
+  }
+</style>
+External (styles.css):
+/* Header styles */
+h1, h2 {
+  font-family: Arial, sans-serif;
+}
+/* Button styles */
+.button {
+  background-color: #28a745;
+  color: white;
+}
+Link in HTML:
+<link rel="stylesheet" href="styles.css">
