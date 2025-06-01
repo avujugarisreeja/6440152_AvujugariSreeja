@@ -1,18 +1,43 @@
-<input type="text" id="phone" placeholder="Phone" onblur="validatePhone(this)">
-<select onchange="alert('Fee: $10')">
-  <option>Select Event</option>
-  <option>Music</option>
-</select>
-<button onclick="alert('Form submitted')">Submit</button>
-<img src="event.jpg" ondblclick="this.style.width='300px'">
-<textarea onkeyup="document.getElementById('charCount').textContent = this.value.length + ' characters'"></textarea>
-<p id="charCount">0 characters</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+</head>
+<body>
+  <form>
+    <input type="text" id="phone" placeholder="Phone Number" onblur="validatePhone(this)">
+    Event Type:
+    <select onchange="showFee(this.value)">
+      <option value="10">Music - ₹10</option>
+      <option value="20">Food - ₹20</option>
+      <option value="15">Tech - ₹15</option>
+    </select>
+    <p id="fee"></p>
+    <textarea id="feedback" placeholder="Your feedback..." onkeyup="countChars(this)"></textarea>
+    <p id="charCount">Characters: 0</p>
+    <img src="img.jpg" alt="Event Image" ondblclick="enlargeImage(this)" width="100">
+    <button type="button" onclick="alert('Thanks for your feedback!')">Submit</button>
+  </form>
 
-<script>
-  function validatePhone(input) {
-    const pattern = /^\d{10}$/;
-    if (!pattern.test(input.value)) {
-      alert('Enter 10-digit number');
+  <script>
+    function validatePhone(input) {
+      if (!/^[0-9]{10}$/.test(input.value)) {
+        alert("Enter a valid 10-digit number.");
+      }
     }
-  }
-</script>
+
+    function showFee(value) {
+      document.getElementById("fee").textContent = "Fee: ₹" + value;
+    }
+
+    function countChars(textarea) {
+      document.getElementById("charCount").textContent = "Characters: " + textarea.value.length;
+    }
+
+    function enlargeImage(img) {
+      img.style.width = "200px";
+    }
+  </script>
+</body>
+</html>
