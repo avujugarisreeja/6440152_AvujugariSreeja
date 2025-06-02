@@ -1,33 +1,40 @@
-<button onclick="findLocation()">Find Nearby Events</button>
-<p id="locationDisplay"></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Geolocation</title>
+</head>
+<body>
+  <button onclick="getLocation()">Find Nearby Events</button>
+  <p id="locationResult"></p>
 
-<script>
-  function findLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPos, showErr, {
-        enableHighAccuracy: true,
-        timeout: 5000
-      });
-    } else {
-      document.getElementById("locationDisplay").textContent = "Geolocation not supported.";
+  <script>
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError, { enableHighAccuracy: true, timeout: 5000 });
+      } else {
+        document.getElementById("locationResult").textContent = "Geolocation not supported.";
+      }
     }
-  }
 
-  function showPos(position) {
-    document.getElementById("locationDisplay").textContent =
-      `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
-  }
-
-  function showErr(error) {
-    switch (error.code) {
-      case error.PERMISSION_DENIED:
-        alert("Permission denied");
-        break;
-      case error.TIMEOUT:
-        alert("Request timed out");
-        break;
-      default:
-        alert("Geolocation error");
+    function showPosition(position) {
+      document.getElementById("locationResult").textContent =
+        "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
     }
-  }
-</script>
+
+    function showError(error) {
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          alert("Permission denied.");
+          break;
+        case error.TIMEOUT:
+          alert("Request timed out.");
+          break;
+        default:
+          alert("Unknown error.");
+      }
+    }
+  </script>
+</body>
+</html>
+
