@@ -1,23 +1,23 @@
-/* Reset all margins and paddings */
+/* Universal Selector */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Style all h2 elements */
+/* Element Selector*/
 h2 {
   color: #333;
   font-size: 24px;
 }
 
-/* Style by ID */
+/* ID Selector */
 #mainHeader {
   background-color: #004080;
   color: white;
   padding: 15px;
 }
 
-/* Style by class */
+/* Class Selector*/
 .eventCard {
   border: 1px solid #ccc;
   padding: 20px;
