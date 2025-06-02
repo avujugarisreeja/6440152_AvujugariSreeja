@@ -1,7 +1,10 @@
-Use Chrome DevTools → Device Toolbar to test responsiveness.
+/* Use Chrome DevTools to debug and inspect styles */
 
-Inspect elements using the Elements tab.
-
-Use the Network tab to confirm styles.css loads.
-
-Edit styles live and observe changes.
+/* Add noticeable visual marker for debugging */
+.debug-box {
+  background-color: pink;
+  border: 2px dashed red;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+}
