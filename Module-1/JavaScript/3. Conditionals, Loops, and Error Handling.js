@@ -1,5 +1,5 @@
 const events = [
-  { name: "Yoga Session", date: "2025-07-01", seats: 0 },
+  { name: "Workshop", date: "2025-07-01", seats: 0 },
   { name: "Art Fair", date: "2025-08-10", seats: 10 }
 ];
 
