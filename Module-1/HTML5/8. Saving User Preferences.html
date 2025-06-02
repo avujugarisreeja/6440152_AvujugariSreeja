@@ -1,24 +1,37 @@
-<select id="eventType" onchange="savePref()">
-  <option value="">Choose</option>
-  <option value="music">Music</option>
-  <option value="sports">Sports</option>
-</select>
-<button onclick="clearPrefs()">Clear Preferences</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Preferences</title>
+</head>
+<body>
+  <select id="eventSelect" onchange="savePreference()">
+    <option value="music">Music</option>
+    <option value="food">Food</option>
+    <option value="tech">Tech</option>
+  </select><br>
 
-<script>
-  function savePref() {
-    const value = document.getElementById('eventType').value;
-    localStorage.setItem("preferredEvent", value);
-  }
+  <button onclick="clearPrefs()">Clear Preferences</button>
 
-  window.onload = function () {
-    const saved = localStorage.getItem("preferredEvent");
-    if (saved) document.getElementById("eventType").value = saved;
-  };
+  <script>
+    function savePreference() {
+      const selected = document.getElementById("eventType").value; 
+      localStorage.setItem('preferredEvent', value);
+    }
 
-  function clearPrefs() {
-    localStorage.clear();
-    sessionStorage.clear();
-    alert("Preferences cleared");
-  }
-</script>
+    window.onload = function () {
+      const saved = localStorage.getItem('preferredEvent');
+      if (saved) {
+        document.getElementById('eventSelect').value = saved;
+      }
+    };
+
+    function clearPrefs() {
+      localStorage.clear();
+      sessionStorage.clear();
+      alert("Preferences cleared.");
+    }
+  </script>
+
+</body>
+</html>
