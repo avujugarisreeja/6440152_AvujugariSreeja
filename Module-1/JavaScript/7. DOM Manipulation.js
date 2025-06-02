@@ -1,11 +1,9 @@
-const eventContainer = document.querySelector("#events");
+// DOM Manipulation
+const container = document.querySelector("#eventContainer");
 
-function displayEvent(event) {
+function renderEvent(name) {
   const card = document.createElement("div");
-  card.textContent = `${event.name} - ${event.date}`;
-  eventContainer.appendChild(card);
-}
-
-function updateUI(event) {
-  // Update text or elements
+  card.className = "eventCard";
+  card.textContent = name;
+  container.appendChild(card);
 }
