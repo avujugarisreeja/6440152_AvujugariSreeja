@@ -1,9 +1,50 @@
 !--Exercise 9.1:--!
-<button class="btn btn-primary">Primary</button>
-<button class="btn btn-outline-danger">Outline</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buttons</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <button class="btn btn-primary">Primary</button>
+  <button class="btn btn-secondary">Secondary</button>
+  <button class="btn btn-success">Success</button>
+  <button class="btn btn-danger">Danger</button>
+  <button class="btn btn-warning">Warning</button>
+  <button class="btn btn-info">Info</button>
+  <button class="btn btn-light">Light</button>
+  <button class="btn btn-dark">Dark</button>
+  <button class="btn btn-link">Link</button>
+  <hr>
+  <button class="btn btn-outline-primary">Outline Primary</button>
+  <button class="btn btn-outline-secondary">Outline Secondary</button>
+</body>
+</html>
 
 !--Exercise 9.2:--!
-<div class="btn-group" role="group">
-  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btncheck1">Toggle</label>
-</div>
+html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Groups</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <div class="btn-group" role="group" aria-label="Basic button group">
+    <button type="button" class="btn btn-primary">Left</button>
+    <button type="button" class="btn btn-primary">Middle</button>
+    <button type="button" class="btn btn-primary">Right</button>
+  </div>
+
+  <div class="btn-group mt-3" role="group" aria-label="Toggle buttons">
+    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck1">Toggle 1</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck2">Toggle 2</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btncheck3">Toggle 3</label>
+  </div>
+</body>
+</html>
