@@ -12,24 +12,25 @@ icons/ (if downloaded separately): Contains Bootstrap Icons
 
 !--Exercise 2.2:--!
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Bootstrap JS Plugin Example</title>
+  <meta charset="UTF-8">
+  <title>Bootstrap JS Plugins</title>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 <body>
 
   <div class="container mt-5">
-    <h2 class="text-primary">Bootstrap Alert Example</h2>
+    <h3 class="text-success">Bootstrap Alert Plugin</h3>
 
-    <!-- Bootstrap Alert with Close Button -->
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
-      This is a Bootstrap alert with JavaScript support!
-      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <!-- Alert box with close button -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      This is an alert using Bootstrap's JS plugin!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
   </div>
 
-  <!-- Link to local Bootstrap JS bundle (includes Popper) -->
+  <!-- Include Bootstrap JavaScript Bundle -->
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
