@@ -1,17 +1,16 @@
 /* Link states */
 a:link {
-  color: #0077cc;
+  color: blue;
 }
 a:hover {
-  color: #005fa3;
+  color: green;
 }
 a:active {
-  color: #003f7f;
+  color: red;
 }
 a:visited {
-  color: #551A8B;
+  color: purple;
 }
-
 /* List styling */
 nav ul {
   list-style-type: none;
