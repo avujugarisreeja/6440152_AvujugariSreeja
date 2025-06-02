@@ -1,10 +1,35 @@
 !--Exercise 2.1:--!
+When we download Bootstrap, we get:
 
-css/: Bootstrap stylesheets.
+css/: Contains Bootstrap's compiled CSS files (e.g., bootstrap.min.css)
+->Used for styling HTML elements.
 
-js/: JavaScript functionality like modals, tooltips.
+js/: Contains Bootstrap's JavaScript files (e.g., bootstrap.bundle.min.js)
+-> Adds interactive features like modals, dropdowns, carousels.
 
-icons/: Bootstrap Icons set.
+icons/ (if downloaded separately): Contains Bootstrap Icons
+->Used to add icons to our UI.
 
 !--Exercise 2.2:--!
-<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap JS Plugin Example</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h2 class="text-primary">Bootstrap Alert Example</h2>
+
+    <!-- Bootstrap Alert with Close Button -->
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      This is a Bootstrap alert with JavaScript support!
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+  </div>
+
+  <!-- Link to local Bootstrap JS bundle (includes Popper) -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
