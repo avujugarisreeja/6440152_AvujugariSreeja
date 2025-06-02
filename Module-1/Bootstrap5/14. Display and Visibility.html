@@ -1,4 +1,33 @@
 !--Exercise 14.1:--!
-<div class="d-none d-md-block d-lg-flex">Visible on md and lg</div>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Visibility</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <div class="d-none d-md-block bg-info text-white p-3 mb-3">Visible on md and up</div>
+  <div class="d-lg-flex bg-success text-white p-3">Visible as flex on lg and up</div>
+</body>
+</html>
+
 !--Exercise 14.2:--!
-<aside class="d-none d-md-block bg-light">Sidebar</aside>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Sidebar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 d-none d-md-block bg-secondary text-white p-3">
+        Sidebar visible on tablets and above
+      </div>
+      <div class="col-md-9 col-12 p-3">
+        Main Content
+      </div>
+    </div>
+  </div>
+</body>
+</html>
