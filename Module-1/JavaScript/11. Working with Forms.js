@@ -1,13 +1,13 @@
-document.querySelector("#regForm").onsubmit = function (e) {
+document.querySelector("form").addEventListener("submit", function(e) {
   e.preventDefault();
-
   const name = this.elements["name"].value;
   const email = this.elements["email"].value;
+  const event = this.elements["event"].value;
 
-  if (!name || !email) {
-    document.querySelector("#error").textContent = "All fields required.";
+  if (!name || !email || !event) {
+    alert("All fields are required!");
     return;
   }
 
-  console.log(`Name: ${name}, Email: ${email}`);
-};
+  console.log("Registered:", name, email, event);
+});
