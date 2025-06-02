@@ -1,8 +1,11 @@
-let events = [];
+let events = [
+  {name: "Music Night", category: "music" },
+  {name: "Baking Workshop", category: "cooking"
+];
 
-events.push({ name: "Baking Workshop", category: "Workshop" });
+events.push({ name: "Jazz Show", category: "music" });
 
-const musicEvents = events.filter(e => e.category === "Music");
+const musicEvents = events.filter(e => e.category === "music");
 
-const eventCards = events.map(e => `Event: ${e.name}`);
-console.log(eventCards);
+const displayCards = events.map(e => `Event: ${e.name}`);
+console.log(displayCards);
