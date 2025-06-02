@@ -1,4 +1,3 @@
-// Event Handling
 document.querySelector("#registerBtn").onclick = () => {
   alert("You clicked register!");
 };
