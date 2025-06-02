@@ -1,11 +1,12 @@
-document.querySelectorAll(".register-btn").forEach(btn => {
-  btn.onclick = () => console.log("User clicked register");
-});
-
-document.querySelector("#categoryFilter").onchange = (e) => {
-  console.log(`Filter by: ${e.target.value}`);
+// Event Handling
+document.querySelector("#registerBtn").onclick = () => {
+  alert("You clicked register!");
 };
 
-document.addEventListener("keydown", (e) => {
-  console.log(`Key pressed: ${e.key}`);
-});
+document.querySelector("#eventFilter").onchange = function () {
+  console.log("Filter selected:", this.value);
+};
+
+document.querySelector("#searchBox").onkeydown = function (e) {
+  console.log("Typing:", e.key);
+};
