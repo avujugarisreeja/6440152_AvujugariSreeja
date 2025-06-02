@@ -1,6 +1,6 @@
 let events = [
   {name: "Music Night", category: "music" },
-  {name: "Baking Workshop", category: "cooking"
+  {name: "Baking Workshop", category: "cooking" }
 ];
 
 events.push({ name: "Jazz Show", category: "music" });
