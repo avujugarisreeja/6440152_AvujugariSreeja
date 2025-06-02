@@ -1,4 +1,3 @@
-// DOM Manipulation
 const container = document.querySelector("#eventContainer");
 
 function renderEvent(name) {
