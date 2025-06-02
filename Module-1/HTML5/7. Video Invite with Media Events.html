@@ -1,14 +1,25 @@
-<video id="promo" controls oncanplay="readyMsg()">
-  <source src="promo.mp4" type="video/mp4">
-</video>
-<p id="videoMsg"></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Invite</title>
+</head>
+<body>
+  <video id="promoVideo" width="320" controls oncanplay="readyToPlay()">
+    <source src="promo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p id="videoMsg"></p>
 
-<script>
-  function readyMsg() {
-    document.getElementById('videoMsg').textContent = "Video ready to play";
-  }
+  <script>
+    function readyToPlay() {
+      document.getElementById("videoMsg").textContent = "Video ready to play";
+    }
 
-  window.onbeforeunload = function () {
-    return "You have unsaved changes.";
-  };
-</script>
+    window.onbeforeunload = function () {
+      return "Are you sure you want to leave this page? Your Changes may not be saved.";
+    };
+  </script>
+
+</body>
+</html>
